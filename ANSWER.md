@@ -14,23 +14,23 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 
 1.2. Se abrieron las fuentes y se reviso la configuracion de Spring.
 
-![fuentes](./img/media/lab/1.PNG) 
+![fuentes](./img/media/1.PNG) 
 
 3. se puso las anotaciones correspondientes en GrammarChecker para usarlo como Bean.
 
-![Bean](./img/media/lab/2.PNG) 
+![Bean](./img/media/2.PNG) 
 
 Se puso las anotaciones correspondientes para inyectar EnglishSpellChecker.
 
-![inject](./img/media/lab/3.PNG) 
+![inject](./img/media/3.PNG) 
 
 4. Prueba 
 
-![Prueba](./img/media/lab/4.PNG) 
+![Prueba](./img/media/4.PNG) 
 
 5. Usando SpanishSpellChecker 
 
-![Prueba](./img/media/lab/5.PNG) 
+![Prueba](./img/media/5.PNG) 
 
 ### *PARTE I*
 
