@@ -29,7 +29,13 @@ public class Blueprint {
     public Blueprint() {
     }    
     
-    public String getName() {
+    public Blueprint(String author, String name, List<Point> pnts) {
+    	this.author=author;
+        this.name=name;
+        points=pnts;
+	}
+
+	public String getName() {
         return name;
     }
 

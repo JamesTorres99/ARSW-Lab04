@@ -10,6 +10,8 @@ import edu.eci.arsw.blueprints.model.Point;
 import edu.eci.arsw.blueprints.persistence.BlueprintNotFoundException;
 import edu.eci.arsw.blueprints.persistence.BlueprintPersistenceException;
 import edu.eci.arsw.blueprints.persistence.BlueprintsPersistence;
+import edu.eci.arsw.blueprints.persistence.impl.BluePrintFilters;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
@@ -23,7 +25,11 @@ import org.springframework.stereotype.Service;
  */
 @Service ("Blueprint")
 public class BlueprintsServices {
-   
+    @Autowired
+    @Qualifier("FilterRedundancias")
+    BluePrintFilters filter;
+	
+	
     @Autowired 
     @Qualifier("Memory")
     BlueprintsPersistence bpp=null;
@@ -44,7 +50,7 @@ public class BlueprintsServices {
      * @throws BlueprintNotFoundException if there is no such blueprint
      */
     public Blueprint getBlueprint(String author,String name) throws BlueprintNotFoundException{
-        return bpp.getBlueprint(author, name);
+        return filter.filtro(bpp.getBlueprint(author, name));
     }
     
     /**
